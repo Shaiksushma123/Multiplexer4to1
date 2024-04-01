@@ -7,15 +7,25 @@
 
 # Program
 module mux(a,b,d,y);
+
 input a,b;
+
 input [3:0]d;
+
 output y;
+
 wire w1,w2,w3,w4;
+
 assign w1=~a&~b&d[0];
+
 assign w2=~a&b&d[1];
+
 assign w3=a&~b&d[2];
+
 assign w4=a&b&d[3];
+
 assign y=w1|w2|w3|w4;
+
 endmodule
 
 # Output
